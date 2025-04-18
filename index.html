@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YAQUBY – Energieberatung</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#111" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="YAQUBY">
+  <link rel="apple-touch-icon" href="/icons/icon-192.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to bottom, #f4f4f7, #d4d4d8);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 0 20px;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #1e1e1e, #3c3c3c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.25rem;
+      color: #444;
+      max-width: 600px;
+    }
+    .hero-video {
+      width: 100%;
+      max-width: 900px;
+      border-radius: 16px;
+      margin-top: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      padding: 100px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 40px;
+      color: #333;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #111;
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    }
+    .button:hover {
+      background: #333;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .section h2 {
+        font-size: 1.8rem;
+      }
+      .hero-video {
+        max-width: 100%;
+        border-radius: 0;
+      }
+      .button {
+        width: 90%;
+        padding: 12px;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>YAQUBY</h1>
+    <p>Exklusive Energieberatung – modern, kostenlos, persönlich. Entdecke, wie einfach Stromvergleich heute funktioniert.</p>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="https://cdn.pixabay.com/vimeo/774622413/tech-140603.mp4?width=1280&hash=ec01630c65f1d23c3fa1d07a84a46a4c1408c3de" type="video/mp4">
+    </video>
+  </header>
+
+  <section class="section fade-in">
+    <h2>Beratung, die anders ist</h2>
+    <p>Bei YAQUBY bekommst du echte Beratung ohne Verkaufsdruck – persönlich, digital oder telefonisch. Du entscheidest.</p>
+    <a href="#" class="button">Jetzt Termin buchen</a>
+  </section>
+
+  <section class="section">
+    <h2>Deine Vorteile</h2>
+    <p>✅ Komplett kostenlos · ✅ DSGVO-konform · ✅ Beratung auf Dari, Türkisch, Persisch & Deutsch · ✅ Modern & mobilfähig</p>
+  </section>
+
+  <footer style="padding:60px 20px;text-align:center;background:#111;color:#fff;font-size:0.9rem;">
+    &copy; 2025 YAQUBY – Energieberatung by Mohammad Reza Yakubzadeh. Alle Rechte vorbehalten.
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(reg => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    }
+  </script>
+</body>
+</html>
